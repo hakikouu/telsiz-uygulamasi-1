@@ -6,6 +6,20 @@
         <div class="col-2">Kullanıcı</div>
         <div class="col-4"><input type="text" id="userInput" /></div>
     </div>
+    
+    <div class="row">
+        <div class="col-2">Oda Adı</div>
+        <div class="col-4"><input type="text" id="roomInput" /></div>
+    </div>
+    <div class="row"> </div>
+    <div class="row">
+        <div class="col-6">
+            <input type="button" id="joinRoomButton" value="Odaya Katıl" />
+        </div>
+    </div>
+    
+    <hr />
+    
     <div class="row">
         <div class="col-2">Mesaj</div>
         <div class="col-4"><input type="text" id="messageInput" /></div>
@@ -13,49 +27,90 @@
     <div class="row"> </div>
     <div class="row">
         <div class="col-6">
-            <input type="button" id="sendButton" value="Mesaj Gönder" />
+            <input type="button" id="sendMessageButton" value="Mesaj Gönder" />
         </div>
     </div>
 </div>
 <hr />
 <div class="row">
-    <div class="col-12">
+    <!-- Sohbet Mesajları Bölümü (Sol Taraf) -->
+    <div class="col-8">
         <ul id="messagesList"></ul>
+    </div>
+    <!-- Kullanıcı Listesi Bölümü (Sağ Taraf) -->
+    <div class="col-4">
+        <h4>Odadakiler</h4>
+        <ul id="usersList"></ul>
     </div>
 </div>
 
 @section Scripts {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <!-- SignalR kütüphanesini projenin kendi içinden, güvenilir bir şekilde çağırıyoruz -->
+    <script src="~/js/signalr.min.js"></script>
     <script>
         const connection = new signalR.HubConnectionBuilder()
             .withUrl("/chatHub")
             .build();
 
-        // Butonun pasif olmasını sağla, bağlantı kurulana kadar tıklanamasın.
-        document.getElementById("sendButton").disabled = true;
+        // HTML'deki elemanları seçip değişkenlere atayalım
+        const userInput = document.getElementById("userInput");
+        const roomInput = document.getElementById("roomInput");
+        const messageInput = document.getElementById("messageInput");
+        const joinRoomButton = document.getElementById("joinRoomButton");
+        const sendMessageButton = document.getElementById("sendMessageButton");
+        const messagesList = document.getElementById("messagesList");
+        const usersList = document.getElementById("usersList"); // YENİ
 
-        // Sunucudan "ReceiveMessage" komutu geldiğinde bu fonksiyon çalışır.
+        // Başlangıçta butonlar pasif olsun
+        joinRoomButton.disabled = true;
+        sendMessageButton.disabled = true;
+
+        // Sunucudan "ReceiveMessage" komutu geldiğinde çalışır
         connection.on("ReceiveMessage", function (user, message) {
             const li = document.createElement("li");
-            document.getElementById("messagesList").appendChild(li);
-            // Mesajın XSS saldırılarına karşı güvenli olması için textContent kullanıyoruz.
+            messagesList.appendChild(li);
             li.textContent = `${user}: ${message}`;
         });
 
-        // Bağlantı başarılı bir şekilde kurulduğunda çalışır.
+        // YENİ: Sunucudan "UsersInRoom" komutu geldiğinde çalışır
+        connection.on("UsersInRoom", function (users) {
+            // Önce listedeki eski isimleri temizle
+            usersList.innerHTML = "";
+            // Gelen yeni listedeki her bir kullanıcı için...
+            for (let i = 0; i < users.length; i++) {
+                const li = document.createElement("li");
+                li.textContent = users[i];
+                usersList.appendChild(li);
+            }
+        });
+
+        // Bağlantı başarılı bir şekilde kurulduğunda çalışır
         connection.start().then(function () {
             console.log("Bağlantı kuruldu!");
-            document.getElementById("sendButton").disabled = false;
+            joinRoomButton.disabled = false;
+            sendMessageButton.disabled = false;
         }).catch(function (err) {
             return console.error(err.toString());
         });
 
-        // "Mesaj Gönder" butonuna tıklandığında bu fonksiyon çalışır.
-        document.getElementById("sendButton").addEventListener("click", function (event) {
-            const user = document.getElementById("userInput").value;
-            const message = document.getElementById("messageInput").value;
-            // Sunucudaki "SendMessage" metodunu çağırır.
-            connection.invoke("SendMessage", user, message).catch(function (err) {
+        // "Odaya Katıl" butonuna tıklandığında çalışır (GÜNCELLENDİ)
+        joinRoomButton.addEventListener("click", function (event) {
+            const userName = userInput.value;
+            const roomName = roomInput.value;
+            // Sunucudaki JoinRoom metodunu yeni parametrelerle çağırıyoruz
+            connection.invoke("JoinRoom", roomName, userName).catch(function (err) {
+                return console.error(err.toString());
+            });
+            event.preventDefault();
+        });
+
+        // "Mesaj Gönder" butonuna tıklandığında çalışır
+        sendMessageButton.addEventListener("click", function (event) {
+            const user = userInput.value;
+            const message = messageInput.value;
+            const roomName = roomInput.value; 
+
+            connection.invoke("SendMessageToGroup", roomName, user, message).catch(function (err) {
                 return console.error(err.toString());
             });
             event.preventDefault();

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "telsiz.uygulaması-1", "telsiz.uygulaması-1.csproj", "{568C23DF-DC23-C966-CA8B-50BEADAD8BBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{568C23DF-DC23-C966-CA8B-50BEADAD8BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568C23DF-DC23-C966-CA8B-50BEADAD8BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568C23DF-DC23-C966-CA8B-50BEADAD8BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568C23DF-DC23-C966-CA8B-50BEADAD8BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {568991D3-020F-47D6-BB2A-22BE158C82E8}
+	EndGlobalSection
+EndGlobal

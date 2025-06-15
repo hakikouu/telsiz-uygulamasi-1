@@ -25,4 +25,4 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapHub<ChatHub>("/chatHub"); // 2. YENİ SATIR: ChatHub'ımızı "/chatHub" adresine bağlıyoruz.
 
-app.Run(Environment.GetEnvironmentVariable("PORT") ?? "8080");
+app.Run("http://localhost:8080");

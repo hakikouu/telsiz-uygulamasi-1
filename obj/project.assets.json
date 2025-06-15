@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HAKTAN\\Documents\\C#\\C#2\\C#2\\telsiz.uygulaması-1\\telsiz.uygulaması-1\\telsiz.uygulaması-1.csproj",
+      "projectUniqueName": "C:\\Users\\HAKTAN\\Desktop\\telsiz.uygulaması-1\\telsiz.uygulaması-1.csproj",
       "projectName": "telsiz.uygulaması-1",
-      "projectPath": "C:\\Users\\HAKTAN\\Documents\\C#\\C#2\\C#2\\telsiz.uygulaması-1\\telsiz.uygulaması-1\\telsiz.uygulaması-1.csproj",
+      "projectPath": "C:\\Users\\HAKTAN\\Desktop\\telsiz.uygulaması-1\\telsiz.uygulaması-1.csproj",
       "packagesPath": "C:\\Users\\HAKTAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HAKTAN\\Documents\\C#\\C#2\\C#2\\telsiz.uygulaması-1\\telsiz.uygulaması-1\\obj\\",
+      "outputPath": "C:\\Users\\HAKTAN\\Desktop\\telsiz.uygulaması-1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HAKTAN\\AppData\\Roaming\\NuGet\\NuGet.Config"

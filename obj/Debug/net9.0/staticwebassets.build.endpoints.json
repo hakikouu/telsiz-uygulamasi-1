@@ -599,6 +599,304 @@
       ]
     },
     {
+      "Route": "js/signalr.min.js",
+      "AssetFile": "js/signalr.min.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000071942446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxR7P3lpIO9LHaftJIejPgDU7pNthm+K5WdTj9xGyM0=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 13:44:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr.min.js",
+      "AssetFile": "js/signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 13:44:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr.min.js.gz",
+      "AssetFile": "js/signalr.min.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxR7P3lpIO9LHaftJIejPgDU7pNthm+K5WdTj9xGyM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 13:44:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cxR7P3lpIO9LHaftJIejPgDU7pNthm+K5WdTj9xGyM0="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr.min.nyhhepaqjg.js",
+      "AssetFile": "js/signalr.min.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000071942446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxR7P3lpIO9LHaftJIejPgDU7pNthm+K5WdTj9xGyM0=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 13:44:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nyhhepaqjg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw="
+        },
+        {
+          "Name": "label",
+          "Value": "js/signalr.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr.min.nyhhepaqjg.js",
+      "AssetFile": "js/signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 13:44:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nyhhepaqjg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0ZjG1tA5FCDiN+Hz20Ig+vfNbt8IyQGbpG3VJzGGMEw="
+        },
+        {
+          "Name": "label",
+          "Value": "js/signalr.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr.min.nyhhepaqjg.js.gz",
+      "AssetFile": "js/signalr.min.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxR7P3lpIO9LHaftJIejPgDU7pNthm+K5WdTj9xGyM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 13:44:55 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nyhhepaqjg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cxR7P3lpIO9LHaftJIejPgDU7pNthm+K5WdTj9xGyM0="
+        },
+        {
+          "Name": "label",
+          "Value": "js/signalr.min.js.gz"
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "js/site.js.gz",
       "Selectors": [
